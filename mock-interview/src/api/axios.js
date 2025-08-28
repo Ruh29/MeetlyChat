@@ -75,7 +75,7 @@ import store from '../redux/store';
 import { setTokens, logout } from '../redux/authSlice';
 
 // Simple API configuration - use environment variable or fallback
-const API_BASE_URL = import.meta.env.VITE_API_URL || 'http://localhost:5002/api';
+const API_BASE_URL =  'https://meetly-chat.vercel.app/api';
 
 const API = axios.create({
   baseURL: API_BASE_URL,
