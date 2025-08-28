@@ -1,5 +1,5 @@
 [build]
-  base = "mock-interview/"
+  base = "."
   command = "npm run build"
   publish = "dist/"
 
@@ -12,11 +12,9 @@
   status = 200
 
 [context.production.environment]
- NODE_VERSION = "18"
   VITE_API_URL = "https://meetlychat.onrender.com/api"
   VITE_SOCKET_URL = "https://meetlychat.onrender.com"
 
 [context.deploy-preview.environment]
- 
   VITE_API_URL = "https://meetlychat.onrender.com/api"
   VITE_SOCKET_URL = "https://meetlychat.onrender.com"
