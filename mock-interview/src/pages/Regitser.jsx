@@ -13,7 +13,7 @@ export default function Register() {
     e.preventDefault();
     if (name && email && password && role) {
       try {
-        const res = await axios.post("https://meetly-chat-git-main-meetlychats-projects.vercel.app/api/auth/register", {
+        const res = await axios.post("https://meetly-chat.vercel.app/api/auth/register", {
           name,
           email,
           password,
