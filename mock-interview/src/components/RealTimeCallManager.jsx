@@ -14,7 +14,7 @@ export default function RealTimeCallManager() {
     if (!user) return;
 
     // Initialize socket connection for real-time notifications
-    socketRef.current = io('http://localhost:5002', {
+    socketRef.current = io('https://meetly-chat-git-main-meetlychats-projects.vercel.app', {
       transports: ['websocket', 'polling']
     });
     const socket = socketRef.current;
