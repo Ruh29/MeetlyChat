@@ -82,7 +82,7 @@ export default function VideoCall() {
     if (!user || !roomId) return;
 
     // Initialize socket connection
-    socketRef.current = io('https://meetly-chat.vercel.app');
+    socketRef.current = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:5004');
     const socket = socketRef.current;
 
     // Socket event listeners

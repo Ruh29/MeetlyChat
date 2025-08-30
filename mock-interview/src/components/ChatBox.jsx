@@ -29,7 +29,7 @@ export default function ChatBox({ interviewId, interview }) {
       fetchMessages();
       
       // Initialize socket connection
-      const newSocket = io('https://meetly-chat.vercel.app');
+      const newSocket = io(import.meta.env.VITE_SOCKET_URL || 'http://localhost:5004');
       setSocket(newSocket);
       
       // Join chat room for this interview
